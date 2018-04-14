@@ -45,7 +45,7 @@ Some of the instructions below are only applicable to the latest version of GodM
 1. 将你的 SD 卡插入到您的计算机
 1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Make backups in multiple locations (such as online file storage)
-  + This backup will save you from a brick if anything goes wrong in the future
+  + 该备份文件可以在以后你的设备出问题时用来救砖
 1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Reinsert your SD card into your device
 
