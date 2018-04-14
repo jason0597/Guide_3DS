@@ -189,10 +189,10 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Launch GodMode9 by holding (Start) during boot
 1. Press (Home) to bring up the action menu
 1. Select "More..."
-1. 选择”SD format menu”
+1. Select "SD format menu"
 1. Select any EmuNAND options you wish to use
   + Most users will want to select "No EmuNAND"
-1. 选择”Auto”
+1. Select "Auto"
 1. Press (A) to accept the label `GM9SD`
   + Optionally, you may input a custom name for the SD card
 1. When prompted, input the key combo given to confirm
