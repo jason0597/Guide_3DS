@@ -1,0 +1,87 @@
+---
+title: "Installing boot9strap (DSiWare Single System)"
+---
+
+{% include toc title="Table of Contents" %}
+
+### Required Reading
+
+To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+
+To extract the `.7z` file linked on this page, you will need a file archiver like [7-Zip](http://www.7-zip.org/) or [The Unarchiver](https://theunarchiver.com/).
+
+### What You Need
+
+* Your console unique `movable.sed` file
+* The `ctcert.bin` file:
+  + [`ctcert.bin`](magnet:?xt=urn:btih:ec445a7aae6fd62432c9ccee091919bda41c8283&dn=ctcert.bin&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.open-internet.nl%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.skyts.net%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.piratepublic.com%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.to%3a2710%2fannounce&tr=udp%3a%2f%2fpublic.popcorn-tracker.org%3a6969%2fannounce&tr=udp%3a%2f%2fwambo.club%3a1337%2fannounce&tr=udp%3a%2f%2ftrackerxyz.tk%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker2.christianbro.pw%3a6969%2fannounce&tr=udp%3a%2f%2ftracker1.wasabii.com.tw%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.xku.tv%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2finferno.demonoid.pw%3a3418%2fannounce&tr=udp%3a%2f%2fopen.facedatabg.net%3a6969%2fannounce&tr=udp%3a%2f%2fmgtracker.org%3a6969%2fannounce&tr=udp%3a%2f%2fipv4.tracker.harry.lu%3a80%2fannounce&tr=udp%3a%2f%2ftracker.christianbro.pw%3a6969%2fannounce)
+* The sudokuhax injection `.zip` corresponding to your region:
+  + [`DSiWare_usa_sudokuhax_injection.zip`](magnet:?xt=urn:btih:ead76f1e382cad15efaf1ba87c702f7b4c16d6e0&dn=USA.zip&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.open-internet.nl%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.skyts.net%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.piratepublic.com%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.to%3a2710%2fannounce&tr=udp%3a%2f%2fpublic.popcorn-tracker.org%3a6969%2fannounce&tr=udp%3a%2f%2fwambo.club%3a1337%2fannounce&tr=udp%3a%2f%2ftrackerxyz.tk%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker2.christianbro.pw%3a6969%2fannounce&tr=udp%3a%2f%2ftracker1.wasabii.com.tw%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.xku.tv%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2finferno.demonoid.pw%3a3418%2fannounce&tr=udp%3a%2f%2fopen.facedatabg.net%3a6969%2fannounce&tr=udp%3a%2f%2fmgtracker.org%3a6969%2fannounce&tr=udp%3a%2f%2fipv4.tracker.harry.lu%3a80%2fannounce&tr=udp%3a%2f%2ftracker.christianbro.pw%3a6969%2fannounce)
+  + [`DSiWare_eur_sudokuhax_injection.zip`](magnet:?xt=urn:btih:fe5be30f2a2c33e5e350e099804840560cbb6626&dn=EUR.zip&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.open-internet.nl%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.skyts.net%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.piratepublic.com%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.to%3a2710%2fannounce&tr=udp%3a%2f%2fpublic.popcorn-tracker.org%3a6969%2fannounce&tr=udp%3a%2f%2fwambo.club%3a1337%2fannounce&tr=udp%3a%2f%2ftrackerxyz.tk%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker2.christianbro.pw%3a6969%2fannounce&tr=udp%3a%2f%2ftracker1.wasabii.com.tw%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.xku.tv%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2finferno.demonoid.pw%3a3418%2fannounce&tr=udp%3a%2f%2fopen.facedatabg.net%3a6969%2fannounce&tr=udp%3a%2f%2fmgtracker.org%3a6969%2fannounce&tr=udp%3a%2f%2fipv4.tracker.harry.lu%3a80%2fannounce&tr=udp%3a%2f%2ftracker.christianbro.pw%3a6969%2fannounce)
+  + [`DSiWare_jpn_4swordshax_injection.zip`](magnet:?xt=urn:btih:b10e9c3289c16c6de8aefcaf3892e2efe267acb8&dn=JPN.zip&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.open-internet.nl%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.skyts.net%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.piratepublic.com%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.to%3a2710%2fannounce&tr=udp%3a%2f%2fpublic.popcorn-tracker.org%3a6969%2fannounce&tr=udp%3a%2f%2fwambo.club%3a1337%2fannounce&tr=udp%3a%2f%2ftrackerxyz.tk%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker2.christianbro.pw%3a6969%2fannounce&tr=udp%3a%2f%2ftracker1.wasabii.com.tw%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.zer0day.to%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.xku.tv%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2finferno.demonoid.pw%3a3418%2fannounce&tr=udp%3a%2f%2fopen.facedatabg.net%3a6969%2fannounce&tr=udp%3a%2f%2fmgtracker.org%3a6969%2fannounce&tr=udp%3a%2f%2fipv4.tracker.harry.lu%3a80%2fannounce&tr=udp%3a%2f%2ftracker.christianbro.pw%3a6969%2fannounce)
+* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
+* The latest release of [b9sTool](https://github.com/Plailect/b9sTool/releases/latest)
+* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases)
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
+* The 11.4.0 / 11.5.0 / 11.6.0 (these versions all have the same FIRM version) `.firm` corresponding to your 3DS (either "OLD" for Old 3DS/2DS, or "NEW" for New 3DS/2DS):
+  + [`2.54-0_11.4_OLD.firm`](http://mgnet.me/dosn7H9)
+  + [`2.54-0_11.4_NEW.firm`](http://mgnet.me/dosn7IX)
+
+### Instructions
+
+#### Section I - Exporting the DSiWare 
+1. Power on your device
+1. Go to System Settings --> Data Management --> Nintendo DSiWare
+1. Find your game injection compatible game from the list of DSiWare games
+1. Tap the game, then tap copy
+1. It will say that you will be unable to play the DSiWare game afterwards. Press yes to agree
+1. Once the copy process has finished, power off your device
+
+#### Section II - Patching the DSiWare
+
+1. Insert your SD card into your computer
+1. Open the [TADPole-Online](https://jisagi.github.io/TADpole-Online/) website
+1. Navigate into `SD:/Nintendo 3DS/<32-character-folder>/<32-character-folder>/Nintendo DSiWare` on your SD card
+1. On the TADPole-Online website, upload:
+ + Your DSiWare `.bin` file from the `Nintendo DSiWare` folder
+ + Your `movable.sed` file
+ + Your `ctcert.bin` file
+ + Your `.app` and `.sav` injection files from your injection `.zip` (extract it first!)
+1. Click the "start!" button
+1. Download the patched DSiWare file from the website
+1. Put the patched DSiWare file into your `Nintendo DSiWare` folder on your SD card and replace the old one (remove the `.patched` extension at the end as well)
+
+#### Section III - Preparing for the boot9strap installation
+
+1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
+1. Copy `boot.nds` (B9STool) to the root of your SD card
+1. Copy `boot.3dsx` to the root of your SD card
+1. Create a folder named `boot9strap` on the root of your SD card
+1. Copy `boot9strap.firm` from the boot9strap `.zip` to the `boot9strap` folder on the root of your SD card
+1. Copy the 11.4.0 / 11.5.0 / 11.6.0 `.firm` corresponding to your 3DS to the `boot9strap` folder that is on the root of your SD card
+1. Reinsert your SD card into your 3DS
+
+#### Section IV - Importing the patched DSiWare
+1. Power on your device
+1. Go to System Settings --> Data Management --> Nintendo DSiWare
+1. Switch to the SD tab from the tabs at the top of the touch screen
+1. Find your patched DSiWare 
+1. Tap the game, then tap "copy" to copy it from the SD card into System Memory
+1. Return to the home menu
+
+#### Section V - Launching the patched DSiWare 
+
+1. Launch b9sTool by starting your DSiWare game 
+1. Select "Install boot9strap" and confirm your selection
+1. Once the boot9strap installaton has finished, exit b9sTool by holding the power button
+
+#### Section VI - Configuring Luma3DS
+
+1. Boot up your device
+1. Use the (A) button and the D-Pad to turn on the following:    
+  + **"Show NAND or user string in System Settings"**
+1. Press (Start) to save and reboot
+
+___
+
+**You can now continue to [finalizing setup](https://3ds.guide/finalizing-setup)**
