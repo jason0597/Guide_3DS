@@ -1,0 +1,50 @@
+---
+title: "Installing boot9strap (DSiWare)"
+---
+
+{% include toc title="Table of Contents" %}
+
+### Required Reading
+
+There are two different methods of installing boot9strap using DSiWare on 11.6.0.
+
+The first method uses the "movable.sed keyY vulnerable to brute-force" exploit detailed [here](https://zoogie.github.io/web/34%E2%85%95c3/#/). What this allows us to do is to retrieve the console-unique encryption key (named `movable.sed`) used to encrypt DSiWare exports, and hence decrypt them, modify them (inject them with an old and vulnerable DSiWare game), re-encrypt them, and import them back into our 3DS.
+
+The second method does not require you to retrieve your console-uniqe encryption key. Instead, it involves injecting the DSiWare game on an already hacked 3DS, and then system transferring that DSiWare game to an unhacked 3DS.
+
+Both of these methods require you to already own a compatible DSiWare game. A list of all compatible DSiWare games can be found [here](dsiware-game-list). A pirated copy of the game will *not* work
+
+Both of these methods use a combination of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws), and an oversight that allows DSiWare titles to read and write to anywhere in encrypted NAND.
+
+___
+### Methods
+___
+
+#### Installing boot9strap (DSiWare Seedminer)
+
+This method only requires you to have a compatible DSiWare game.
+
+Continue to [Installing boot9strap (Seedminer)](https://jisagi.github.io/SeedminerGuide/)
+{: .notice--primary}
+
+___
+
+#### Installing boot9strap (DSiWare System Transfer)
+
+This method will require two devices. One 3DS (or 2DS) must be running boot9strap and is referred to as the *source 3DS*, while the other 3DS (or 2DS) is on stock 11.6.0 and is referred to as the *target 3DS*.
+
+This method will assume that the source 3DS is using boot9strap and has completed this guide.
+
+This method will require you to [System Transfer](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/) from a CFW 3DS to a stock 3DS as part of the process. System Transfers will work in the following directions *only*:    
+  + New 3DS or New 2DS -> New 3DS or New 2DS    
+  + Old 3DS or Old 2DS -> Old 3DS or Old 2DS    
+  + Old 3DS or Old 2DS -> New 3DS or New 2DS   
+
+Both systems MUST be from the same region.
+{: .notice--warning} 
+
+In both of these methods, the source 3DS's NNID will be stuck on the target 3DS unless you either system transfer back or call Nintendo (details can be found in the instructions)! System Transfers can only be performed once a week per NNID. Note that it is impossible to system transfer from an N3DS to an O3DS!
+{: .notice--danger}
+
+Continue to [Installing boot9strap (DSiWare System Transfer)](installing-boot9strap-(dsiware-save-injection))
+{: .notice--primary}
