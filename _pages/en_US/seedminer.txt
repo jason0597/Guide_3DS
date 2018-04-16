@@ -1,0 +1,63 @@
+---
+title: "Seedminer"
+---
+
+{% include toc title="Table of Contents" %}
+
+The process of getting your `movable.sed` is split in two parts. First you need to retrieve the `movable_part1.sed` file, and then from that [brute-force](https://simple.wikipedia.org/wiki/Brute_force_attack) the actual `movable.sed` from it. You can either brute-force it yourself or ask the automated service to perform a brute-force for you.
+Note that in order to brute-force it yourself you will need a good Graphics card in your computer. If you are unsure, do the automated bruteforce method.
+
+### Instructions
+
+#### Section I - Getting the ID0
+
+1. Power off your device
+1. Insert your device's SD card into your computer
+1. Navigate into the `Nintendo 3DS` folder
+1. You will now find one or multiple folders with 32-character-long names   
+If you only have one folder, skip this step
+{: .notice--info}
+  + Navigate back to the SD root
+  + Rename your `Nintendo 3DS` folder to `Nintendo BACKUP`
+  + Put the SD Card back into your 3DS and power it on
+  + **Wait** for it to generate its data on your SD Card
+  + Power off your 3DS and insert the SD Card back into your PC
+  + Open the newly-generated `Nintendo 3DS` folder
+1. You should now see one folder with a 32-character-long name. The name of this folder is your ID0. **Copy it**
+ + If you did NOT skip step 4, delete the `Nintendo 3DS` folder and rename the `Nintendo BACKUP` folder back to `Nintendo 3DS`
+
+#### Section II - Retrieving your movable_part1.sed
+
+Open [the Seedhelper website](https://seedhelper.figgyc.uk/) and input your 3DS's Friend Code and your ID0. Click "Go" and then add the displayed Friend Code on your system. Give it a few seconds and it should proceed to the next stage.
+
+#### Section III - Bruteforcing your movable_part1.sed
+
+Choose **one** of the following options:
+  + I do **not** have a somewhat powerful Graphics card     
+  On the Seedhelper website click the "Continue" button to request a brute-force. This will send a request to the network to brute-force your `movable.sed`. Once it is finished, you will be given a download link to your `movable.sed`. Download your file, and go to the end of this page to proceed to Installing boot9strap DSiWare single system
+
+  + I **do** have a somewhat powerful Graphics card  
+  On the Seedhelper website click the "download movable_part1.sed" link to download your `movable_part1.sed` file. Then, proceed to the next section
+
+
+#### Section IV - Manually bruteforcing your movable_part1.sed
+
+Make sure that you have downloaded and installed the latest release of [Python 3](https://www.python.org/downloads/)
+
+1. Download the latest release of [Seedminer](https://github.com/zoogie/seedminer/releases/latest/)
+2. From the Seedminer release `.zip`, extract the `seedminer` folder
+3. Copy your `movable_part1.sed` file into the `seedminer` folder
+4. Type `cmd` in the top bar of the file explorer window and hit ENTER
+
+![img](https://i.imgur.com/VV5Wxfj.gif)
+
+5. In the command prompt that opens up type:  
+ `py -3 seedminer_launcher.py update-db && py -3 seedminer_launcher.py gpu`
+
+6. Hit ENTER and the bruteforce process will begin.  
+This will take some time. Once it has finished, proceed to Installing boot9strap DSiWare single system.
+
+___
+
+### Continue to [Installing boot9strap DSiWare Single System](installing-boot9strap-(dsiware-single-system))
+{: .notice--primary} 
