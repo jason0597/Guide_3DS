@@ -20,16 +20,16 @@ ___
 ### Methods
 ___
 
-#### Installing boot9strap (DSiWare Seedminer)
+#### Installing boot9strap (DSiWare Single System)
 
 This method only requires you to have a compatible DSiWare game.
 
-Continue to [Installing boot9strap (Seedminer)](https://jisagi.github.io/SeedminerGuide/)
+Continue to [Seedminer](seedminer)
 {: .notice--primary}
 
 ___
 
-#### Installing boot9strap (DSiWare System Transfer)
+#### Installing boot9strap (DSiWare Multi System)
 
 This method will require two devices. One 3DS (or 2DS) must be running boot9strap and is referred to as the *source 3DS*, while the other 3DS (or 2DS) is on stock 11.6.0 and is referred to as the *target 3DS*.
 
@@ -46,5 +46,5 @@ Both systems MUST be from the same region.
 In both of these methods, the source 3DS's NNID will be stuck on the target 3DS unless you either system transfer back or call Nintendo (details can be found in the instructions)! System Transfers can only be performed once a week per NNID. Note that it is impossible to system transfer from an N3DS to an O3DS!
 {: .notice--danger}
 
-Continue to [Installing boot9strap (DSiWare System Transfer)](installing-boot9strap-(dsiware-multi-system))
+Continue to [Installing boot9strap (DSiWare Multi System)](installing-boot9strap-(dsiware-multi-system))
 {: .notice--primary}
