@@ -12,7 +12,7 @@ The first method uses the "movable.sed keyY vulnerable to brute-force" exploit d
 
 The second method does not require you to retrieve your console-uniqe encryption key. Instead, it involves injecting the DSiWare game on an already hacked 3DS, and then system transferring that DSiWare game to an unhacked 3DS.
 
-Both of these methods require you to already own a compatible DSiWare game. A list of all compatible DSiWare games can be found [here](dsiware-game-list). A pirated copy of the game will *not* work
+Both of these methods require you to already own a compatible DSiWare game. A list of all compatible DSiWare games can be found [here](https://gist.github.com/figgyc/bfbeb03079f8bbaf80ebbc6507edb974#eur). A pirated copy of the game will *not* work
 
 Both of these methods use a combination of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws), and an oversight that allows DSiWare titles to read and write to anywhere in encrypted NAND.
 
@@ -46,5 +46,5 @@ Both systems MUST be from the same region.
 In both of these methods, the source 3DS's NNID will be stuck on the target 3DS unless you either system transfer back or call Nintendo (details can be found in the instructions)! System Transfers can only be performed once a week per NNID. Note that it is impossible to system transfer from an N3DS to an O3DS!
 {: .notice--danger}
 
-Continue to [Installing boot9strap (DSiWare System Transfer)](installing-boot9strap-(dsiware-save-injection))
+Continue to [Installing boot9strap (DSiWare System Transfer)](installing-boot9strap-(dsiware-multi-system))
 {: .notice--primary}
